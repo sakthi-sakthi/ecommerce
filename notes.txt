@@ -1,0 +1,16 @@
+Go to the project directory
+cd project-name
+
+Copy .env.example file to .env and edit database credentials there
+
+composer install
+
+php artisan key:generate
+
+php artisan artisan migrate:fresh --seed
+
+php artisan storage:link
+
+Login
+email = admin@example.com
+password = 123
