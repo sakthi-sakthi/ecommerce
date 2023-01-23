@@ -267,7 +267,6 @@ $(document).ready(function(){
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Description</th>
-                <th>Details</th>
                 <th>Weight</th>
               </tr>
               @foreach($data as $data)
@@ -278,7 +277,6 @@ $(document).ready(function(){
                 <td>{{$data['price']}}</td>
                 <td>{{$data['quantity']}}</td>
                 <td>{{$data['description']}}</td>
-                <td>{{$data['details']}}</td>
                 <td>{{$data['weight']}}</td>
               </tr>
               @endforeach
