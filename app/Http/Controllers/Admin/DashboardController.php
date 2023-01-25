@@ -7,6 +7,8 @@ use App\Models\Product;
 use App\Models\Tag;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\ProductTags;
+use App\Models\Media;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -18,7 +20,9 @@ class DashboardController extends Controller
         $tag = Tag::count();
         $categories = Category::count();
         $users = User::count();
-        return view('admin.index',compact('data','allProjects','tag','categories','users'));
+        $product_tag = ProductTags::count();
+        $media = Media::count();
+        return view('admin.index',compact('data','allProjects','tag','categories','users','product_tag','media'));
     }
     
 }
