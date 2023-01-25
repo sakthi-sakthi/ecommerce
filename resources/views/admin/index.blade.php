@@ -108,7 +108,7 @@ nav .fas{
   border: 1px solid #4AD489;
 }
 .users .card{
-  width: 22%;
+  width: 30%;
   margin: 10px;
   background: #fff;
   text-align: center;
@@ -120,8 +120,8 @@ nav .fas{
 .users .card h4{
   text-transform: uppercase;
 }
-.users .card p{
-  font-size: 12px;
+.users .card h3{
+  font-size: 15px;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -140,7 +140,7 @@ nav .fas{
 table, th, td, tr {
   border: 3px solid black;
   border-collapse: collapse;
-  border-color: #96D4D4;
+  border-color: black;
 }
 </style>
 <!-- script tags start -->
@@ -227,65 +227,42 @@ $(document).ready(function(){
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                     </ul>
                 </nav>
+                
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="users">
                 <div class="card">
                 <h4>{{ $allProjects }}</h4>
-                <p><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Total Products</p>
+                <h3><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Total Products</h3>
                 <button onclick="window.location.href ='{{ route('admin.products.index') }}';">Products</button>
                 </div>
                 <div class="card">
                 <h4>{{ $tag }}</h4>
-                <p><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;&nbsp;Total tags</p>
+                <h3><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;&nbsp;Total tags</h3>
                 <button onclick="window.location.href ='{{ route('admin.tags.index') }}';">Tags</button>
                 </div>
                 <div class="card">
                 <h4>{{ $categories }}</h4>
-                <p><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Total Categories</p>
+                <h3><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Total Categories</h3>
                 <button onclick="window.location.href ='{{ route('admin.categories.index') }}';">Categories</button>
                 </div>
                 <div class="card">
                 <h4>{{ $users }}</h4>
-                <p><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Total Users</p>
+                <h3><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Total Users</h3>
                 <button>Users</button>
                 </div>
-            <section class="attendance">
-            <div class="attendance-list">
-            <div class="table-responsive">
-            <table class="table" id="example">
-            <thead>
-            <h2 style="text-align: center; margin-left: 1REM;font-weight: bold;letter-spacing: 2PX;">PRODUCT DETAILS</h2>
-            <br>
-             <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="width: 300px;margin-left:49.4rem;"> -->
-             <input type="search" placeholder="Type Here to Search..."  id="myInput" onkeyup="myFunction()">
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Slug</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Description</th>
-                <th>Weight</th>
-              </tr>
-              @foreach($data as $data)
-              <tr>
-                <td>{{$data['id']}}</td>
-                <td>{{$data['name']}}</td>
-                <td>{{$data['slug']}}</td>
-                <td>{{$data['price']}}</td>
-                <td>{{$data['quantity']}}</td>
-                <td>{{$data['description']}}</td>
-                <td>{{$data['weight']}}</td>
-              </tr>
-              @endforeach
-              <tr class='no-records' style="display: none;text-align:center;">
-                <td colspan='10' style="letter-spacing:2px;font-size:20px;"><b>No records found Here</b></td>
-              </tr>
-          </table>
-        </div>
-      </section>
+                <div class="card">
+                <h4>{{ $product_tag }}</h4>
+                <h3><i class="fab fa-accessible-icon" aria-hidden="true"></i>&nbsp;&nbsp;Total Products Tag</h3>
+                <button>Products Tag</button>
+                </div>
+                <div class="card">
+                <h4>{{ $media }}</h4>
+                <h3><i class="fa fa-image" aria-hidden="true"></i>&nbsp;&nbsp;Total Media</h3>
+                <button>Media</button>
+                </div>
+            
                 </div>
                 </div>
             <!-- End of Main Content -->
