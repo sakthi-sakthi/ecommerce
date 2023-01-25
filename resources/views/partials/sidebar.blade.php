@@ -1,12 +1,17 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center"  onclick="document.getElementById('logout-form').submit()" href="#" data-toggle="modal" data-target="#logoutModal">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">SMILE</div>
             </a>
+            
+            <form id="logout-form" action="{{ route('logout') }}" method="post">
+                @csrf
+            </form>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -43,6 +48,8 @@
                         <a class="collapse-item" href="{{ route('admin.products.index') }}"><i class="fas fa-clipboard"> &nbsp;Product</i></a>
                     </div>
                 </div>
+                
             </li>
         </ul>
+        
         
