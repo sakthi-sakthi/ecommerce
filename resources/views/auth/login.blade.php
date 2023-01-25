@@ -44,7 +44,7 @@ span{
                 <label for="floatingPassword">Password <span>*</span></label>
               </div>
               <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+              <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} required>
 
                 <label class="form-check-label" for="rememberPasswordCheck">
                   Remember password
