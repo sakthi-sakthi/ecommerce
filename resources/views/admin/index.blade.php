@@ -114,7 +114,7 @@ nav .fas{
   text-align: center;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
   display:inline-block;
 }
 .users .card h4{
